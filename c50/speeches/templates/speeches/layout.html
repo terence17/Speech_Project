@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Speeches</title>
+        <link href="{% static 'speeches/S_style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+    <div class="sidenav">
+        <a href="{% url 'speeches:index' %}">Home</a>
+        <a href="{% url 'speeches:speech' %}">Speeches</a>
+        <a href="{% url 'speeches:speakers' %}">Speakers</a>
+        <a href="{% url 'login' %}">Logout</a>
+    </div>    
+
+    <div class="body">    
+        {% block body %}
+        {% endblock %}
+    </div>
+       
+
+
+    </body>
+</html>

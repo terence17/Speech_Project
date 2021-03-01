@@ -1,0 +1,13 @@
+{% load static %}
+
+<head>
+    <link href="{% static 'speeches/S_style.css' %}" rel="stylesheet">
+</head>
+
+<h2 class="log">Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit"><a href="{% url 'speeches:index' %}">Log In</a></button>
+  
+</form>
